@@ -24,6 +24,7 @@ public class CapitalActivity extends AppCompatActivity {
         }
         else
         {
+
             Toast.makeText(this, "No Message", Toast.LENGTH_SHORT).show();
         }
     }
