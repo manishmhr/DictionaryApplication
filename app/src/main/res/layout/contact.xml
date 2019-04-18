@@ -6,8 +6,8 @@
     android:layout_margin="20dp">
     
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:id="@+id/imgProfile"
         android:src="@drawable/noavatar"
         />
@@ -20,7 +20,7 @@
         android:layout_marginTop="20dp"
         android:layout_toEndOf="@+id/imgProfile"
         android:hint="Contact Name"
-        android:textSize="20sp"/>
+        android:textSize="10sp"/>
 
     <TextView
         android:id="@+id/tvPhone"
@@ -30,16 +30,12 @@
         android:layout_marginTop="60dp"
         android:layout_toEndOf="@+id/imgProfile"
         android:hint="Phone Number"
-        android:textSize="20sp" />
+        android:textSize="10sp" />
 
 
 
 
-    <!--<android.support.v7.widget.RecyclerView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:id="@+id/recyclerView"-->
-        <!--/>-->
+
 
 
 

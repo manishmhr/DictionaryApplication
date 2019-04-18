@@ -1,9 +1,8 @@
-package Model;
+package adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +13,7 @@ import com.application.R;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import model.Contacts;
 
 
 public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ContactsViewHolder> {
@@ -29,7 +29,8 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.Contac
     @Override
     public ContactsViewHolder onCreateViewHolder(@NonNull
     ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(ViewGroup.getContext())
+        View view = LayoutInflater.from(viewGroup.getContext())
+        //View view = LayoutInflater.from(ViewGroup.getContext())
                 .inflate(R.layout.contact,viewGroup,false);
         return new ContactsViewHolder(view);
     }
