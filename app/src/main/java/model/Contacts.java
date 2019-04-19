@@ -4,11 +4,16 @@ public class Contacts {
 
     private String name;
     private String phoneNo;
+    private String email;
+    private String location;
     private int imageId;
 
-    public Contacts(String name, String phoneNo, int imageId) {
+
+    public Contacts(String name, String phoneNo, String email, String location, int imageId) {
         this.name = name;
         this.phoneNo = phoneNo;
+        this.email = email;
+        this.location = location;
         this.imageId = imageId;
     }
 
@@ -28,12 +33,25 @@ public class Contacts {
         this.phoneNo = phoneNo;
     }
 
-    public int getImageId() {
-        return imageId;
+    public int getImageId() { return imageId; }
+
+    public void setImageId(int imageId) { this.imageId = imageId; }
+
+
+    public String getEmail() {
+        return email;
     }
 
-    public void setImageId(int imageId) {
-        this.imageId = imageId;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }
 
