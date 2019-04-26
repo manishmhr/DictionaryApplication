@@ -18,9 +18,11 @@
         android:id="@+id/con"
         ></ListView>
 
-
-
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnaddd"
+        android:text="Add country" />
 
 
 

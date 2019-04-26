@@ -9,6 +9,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -21,6 +26,20 @@ public class MainActivity extends AppCompatActivity {
             "Germany", "Munich",
             "England", "London",
     };
+    public  void readFromFile(){
+        try {
+            FileInputStream fos = openFileInput("words.txt");
+            InputStreamReader isr = new InputStreamReader(fos);
+            BufferedReader br = new BufferedReader(isr);
+            String line= "";
+            while ((line=br.readLine()) != null){
+                String[] parts = line.split("->");
+                dictionary.put(parts[0], parts[1]);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     private Map<String,String> dictionary;
 
@@ -58,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
     }
 }
 
